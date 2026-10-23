@@ -1,7 +1,7 @@
 {
   "name": "ga_racing",
   "version": "1.0.0",
-  "description": "",
+  "description": "NeedForJS — a vanilla JavaScript arcade racing game packaged with Electron",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -17,8 +17,6 @@
   },
   "homepage": "https://github.com/Dizorov/GA_Racing#readme",
   "devDependencies": {
-    "electron": "^10.1.1",
-    "path": "^0.12.7",
-    "url": "^0.11.0"
+    "electron": "^10.1.1"
   }
 }

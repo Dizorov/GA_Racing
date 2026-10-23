@@ -22,6 +22,13 @@ const setting = {
   traffic: 2
 }
 
+const enemyImages = ['enemy.png', 'enemy1.png', 'enemy2.png', 'enemy3.png',
+  'enemy4.png', 'enemy5.png', 'enemy6.png', 'enemy7.png'];
+
+function getRandomEnemyImage() {
+  return enemyImages[Math.floor(Math.random() * enemyImages.length)];
+}
+
 function getQuantityElements(heightElement) {
   return document.documentElement.clientHeight / heightElement + 1;
 }
@@ -44,7 +51,7 @@ function startGame(){
     enemy.y = -100 * setting.traffic * i + 1;
     enemy.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
     enemy.style.top = enemy.y + 'px';
-    enemy.style.background = 'transparent url("./image/enemy2.png") center / cover no-repeat'
+    enemy.style.background = 'transparent url("./image/' + getRandomEnemyImage() + '") center / cover no-repeat'
     gameArea.appendChild(enemy);
   }
   setting.score = 0;
@@ -134,6 +141,7 @@ function moveEnemy() {
     if (item.y >= document.documentElement.clientHeight + 50) {
       item.y = -100 * setting.traffic;
       item.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
+      item.style.background = 'transparent url("./image/' + getRandomEnemyImage() + '") center / cover no-repeat';
     }
   })
 }

@@ -1,5 +1,3 @@
-const { fileURLToPath } = require('url');
-
 const url = require('url').format({
   protocol: 'file',
   slashes: true,
